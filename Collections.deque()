@@ -1,0 +1,17 @@
+
+from collections import deque
+#deque cũng giống như list, nhưng nếu như muốn remove hay thêm element ở đuôi hoặc đầu thì deque nhanh hơn list rất nhiều 
+d = deque()
+for i in range(int(input())):
+
+    c = input().split()
+    if c[0]=="append":
+        d.append(c[1])
+    elif c[0]=="appendleft":
+        d.appendleft(c[1])
+    elif c[0]=="pop":
+        d.pop()
+    elif c[0]=="popleft":
+        d.popleft()
+# dấu * dùng để unpack, VD như mylist = [1,2,3], print(mylist) = [1,2,3] print(*mylist) = 1 2 3
+print(*d)
