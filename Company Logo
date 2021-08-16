@@ -1,0 +1,9 @@
+    
+    from collections import Counter
+    # chuyển s qua dạng list và lấy số lần lặp từng kí tự
+    s = (Counter(list(s)))
+    # lấy 3 kí tự đầu phổ biến nhất
+    for i in range(0,3):
+        # dùng lambda để sắp, nếu thêm dấu trừ trước x[1] thì sẽ sắp ngược lại (x[1] đang sắp từ thấp lên cao)
+        a = sorted(s.items(),key = lambda x: (-x[1],x[0]))
+        print(a[i][0],a[i][1])
