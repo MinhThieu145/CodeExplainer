@@ -1,0 +1,21 @@
+from collections import deque
+def check(array,length):
+    for _ in range(length):
+        # nếu như đầu nào lớn hơn thì big lấy element đó 
+        if array[0] > array[-1]:
+            big_one = array.popleft()
+        else:
+            big_one = array.pop()
+            # nếu length ko phải 0, thì kiểm tra xem ở 2 đầu còn lại có element nào lớn hơn big one hay ko
+        if len(array) != 0:
+            if array[0] > big_one or array[-1] > big_one:
+                return ('No')
+                 
+    return('Yes')
+
+for _ in range(int(input())):
+    length = int(input())
+    # dùng deque vì chỉ lấy element 2 đầu, convert qua int 
+    array = deque(map(int,(input().split())))
+    print(check(array,length))
+    
