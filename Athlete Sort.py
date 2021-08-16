@@ -1,0 +1,7 @@
+
+# bài này mặc dù được cho sẵn arr (array) nhưng cần nhìn vào array đã cho để hiểu
+# arr.append(list(map(int, input().rstrip().split()))) sẽ ra là 1 list có dạng [[1,2,3],[4,5,6],...]
+# mỗi list con tượng trưng cho 1 dòng, nên dùng lambda để sắp xếp theo element thứ k trong list
+sortedList = sorted(arr, key = lambda x: x[k])
+for i in sortedList:
+    print(*i)
