@@ -1,0 +1,3 @@
+def solve(s):
+    # list comprehension (in hoa x trong list s (s.split() tạo thành list))
+    return (' '.join([x.capitalize() for x in s.split(' ')]))
