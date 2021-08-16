@@ -1,0 +1,8 @@
+for _ in range(int(input())):
+    try:
+        # lấy dữ liệu từ bài
+        a,b=input().split()
+        print(int(a)//int(b))
+    # nếu như có lỗi, thì in lỗi
+    except Exception as error:
+        print("Error Code:",error)
