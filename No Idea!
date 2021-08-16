@@ -1,0 +1,16 @@
+# lấy dữ liệu từ bài
+(n,m) = input().split(' ')
+array = input().split(' ')
+# dùng set() bình thường sẽ bỏ đi những item bị duplicate, nhưng vì đề bài cho là A và B sẽ không có duplicate, dùng set sẽ nhanh
+#hơn list 
+array_A = set(input().split(' '))
+array_B = set(input().split(' '))
+happy = 0
+
+for item in array:
+    if item in array_A:
+        happy += 1
+    elif item in array_B:
+        happy -= 1
+        
+print(happy)
