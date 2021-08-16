@@ -1,0 +1,5 @@
+def average(array):
+    # set là 1 array nhưng không có phần tử bị duplicate (lặp) 
+    array = set(array)
+    return sum(array) / len(array)
+
