@@ -1,0 +1,16 @@
+# import ordered dictionary
+from collections import OrderedDict
+
+my_dict = OrderedDict()
+for _ in range(int(input())):
+    # không thể dùng split được vì có những cái tên như 'Apple Juice 12', nó sẽ phân làm 3, nên rpartion(' ') sẽ tìm khoảng trống 
+    # ngoài cùng 
+    name,space,price = input().rpartition(' ')
+    # nếu chưa có thì thêm vào, có rồi thì update cộng thêm
+    if not name in my_dict:
+        my_dict[name] = int(price)
+    else:
+        my_dict[name] += int(price)
+for name, price in my_dict.items():
+    print(name, price)
+   
