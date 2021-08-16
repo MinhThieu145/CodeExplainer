@@ -1,0 +1,18 @@
+x = int(input())
+y = int(input())
+z = int(input())
+n = int(input())
+total_list = []
+
+
+# syntax của list comprehansion: [(làm gì - expression) for item in (có thể loop đc - iterable ) if (điều kiện)condition == True]
+# dòng dưới là in list [abc] cho a trong range (x+1), b trong range y + 1 
+print([[a,b,c] for a in range(x+1) for b in range(y + 1) for c in range(z + 1) if a + b + c != n])
+
+# để dễ hình dung thì code trên bằng dòng dưới đây nhé:
+for a in range(x+1):
+    for b in range(y +1):
+        for c in range(z+1):
+            if (a + b +c) != n:
+                total_list.append([a,b,c])
+    print(total_list)
