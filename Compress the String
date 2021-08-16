@@ -1,0 +1,6 @@
+from itertools import groupby
+# có thể đọc thêm về groupby trong python, nhưng hiện tại groupby sẽ lấy 2 giá trị, kí tự và số lần lặp
+for ki_tu, solanlap in groupby(input()): 
+    ki_tu= int(ki_tu)
+    solanlap = len(list(solanlap))
+    print((solanlap,ki_tu),end=" ")
